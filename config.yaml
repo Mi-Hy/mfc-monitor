@@ -1,0 +1,23 @@
+fixed_configurations:
+  device_name: mfc01
+  firmware_version: 'v0.0.1'
+influxdb:
+  url: https://influxdb.dramcoserver.be/
+  token: 5Ivo3RqurDOrJIswBwJcOAbCOOWmQjGAw-0mRcIlMIWADTHh-eNS-gKmR1R1e9vb54hmq6-ICHd5J0JlpkSVBg==
+  read-token: XmwKq3OpJc_0iIVacO2Hr4RElQmyUuVXGCzHGYLV7KDuGcdwwjmhlcgyob-HruaaLYfuHYHE4c7i4vhoSQtsiw==
+  org: "Dramco"
+  bucket: "mfc-data"
+timer_settings:
+  system_interval_hour: 0
+  system_interval_minute: 30
+  system_interval_second: 0
+  voltage_interval_hour: 0
+  voltage_interval_minute: 30
+  voltage_interval_second: 0
+  load_interval_hour: 4
+  load_interval_minute: 0
+  load_interval_second: 0
+  update: 0
+status:
+  voltage: 0
+  load: 0
