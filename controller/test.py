@@ -43,6 +43,7 @@ if __name__ == "__main__":
 
         if ep_data is None:
             print(f"[Cell {i}] No data received")
+            io.set_output(value_mapper.get(i, i), 0)
             continue
 
         # print(ep_data)
