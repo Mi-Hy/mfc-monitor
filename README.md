@@ -13,6 +13,16 @@
 - Add key to github account [online] --> settings --> SSH Key
 - Clone repo via SSH
 
+### 3️⃣ Enable I2C
+- `sudo raspi-config`
+- `3 Interface Options` --> `I5 I2C` --> `Yes`
+- Check devices on I2C bus
+  ```
+  sudo apt update
+  sudo apt install i2c-tools
+  sudo i2cdetect -y 1
+  ```
+
 ### 5️⃣ Connection with temperature sensors DS18B20
 1. Connect D to GPIO4
 2. Enable w1-gpio: add `dtoverlay=w1-gpio` with `sudo nano /boot/firmware/config.txt`
