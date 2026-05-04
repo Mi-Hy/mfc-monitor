@@ -12,6 +12,12 @@
 - ENTER 3x
 - Add key to github account [online] --> settings --> SSH Key
 - Clone repo via SSH
+- Install git
+	```
+	sudo apt update
+	sudo apt install git -y
+	```
+- Git clone via SSH KEY on rpi in home dir: `git clone git@github.com:Mi-Hy/mfc-monitor-hw2.git`
 
 ### 3️⃣ Enable I2C
 - `sudo raspi-config`
