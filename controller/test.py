@@ -41,6 +41,10 @@ if __name__ == "__main__":
 
         ep_data = get_ep_data()
 
+        if ep_data is None:
+            print(f"[Cell {i}] No data received")
+            continue
+
         # print(ep_data)
 
         print(f"[Cell {i}] Buffer Voltage: {ep_data['buffer_voltage_mv']} mV")
