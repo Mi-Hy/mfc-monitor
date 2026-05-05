@@ -37,7 +37,7 @@ if __name__ == "__main__":
     for i in range(CELLS):
         io.set_output(value_mapper.get(i, i), 1)
 
-        time.sleep(1.5)
+        time.sleep(0.5)
 
         ep_data = get_ep_data()
 
@@ -52,11 +52,11 @@ if __name__ == "__main__":
 
         voltage_buffer.append(ep_data["buffer_voltage_mv"])
 
-        time.sleep(2)
+        time.sleep(0.5)
 
         io.set_output(value_mapper.get(i, i), 0)
 
-        time.sleep(2)
+        time.sleep(0.5)
     
     voltage_data = {f"cell_{i}": voltage_buffer[i] for i in range(CELLS)}
 
