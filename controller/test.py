@@ -5,7 +5,7 @@ from lib.configuration import *
 
 io = TCA9554()
 
-CELLS = 2
+CELLS = 8
 
 value_mapper = {0: 3, 1: 2, 2: 1, 3: 0, 4: 7, 5: 6, 6: 5, 7: 4}
 
@@ -52,7 +52,7 @@ if __name__ == "__main__":
 
         voltage_buffer.append(ep_data["buffer_voltage_mv"])
 
-        time.sleep(30)
+        time.sleep(2)
 
         io.set_output(value_mapper.get(i, i), 0)
 
