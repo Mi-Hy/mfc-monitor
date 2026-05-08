@@ -5,7 +5,9 @@ from lib.configuration import *
 
 io = TCA9554()
 
-CELLS = 4
+CELLS = 8
+
+value_mapper = {0: 3, 1: 2, 2: 1, 3: 0, 4: 7, 5: 6, 6: 5, 7: 4}
 
 if __name__ == "__main__":
 
@@ -33,12 +35,16 @@ if __name__ == "__main__":
     voltage_buffer = []
 
     for i in range(CELLS):
-        io.set_output(i*2, 1)
-        io.set_output(i*2 + 1, 1)
+        io.set_output(value_mapper.get(i, i), 1)
 
         time.sleep(1.5)
 
         ep_data = get_ep_data()
+
+        if ep_data is None:
+            print(f"[Cell {i}] No data received")
+            io.set_output(value_mapper.get(i, i), 0)
+            continue
 
         # print(ep_data)
 
@@ -46,14 +52,13 @@ if __name__ == "__main__":
 
         voltage_buffer.append(ep_data["buffer_voltage_mv"])
 
-        time.sleep(0.5)
+        time.sleep(1.5)
 
-        io.set_output(i*2, 0)
-        io.set_output(i*2 + 1, 0)
+        io.set_output(value_mapper.get(i, i), 0)
 
-        time.sleep(2)
+        time.sleep(1.5)
     
-    voltage_data = {f"cell_{i}": voltage_buffer[i] for i in range(4)}
+    voltage_data = {f"cell_{i}": voltage_buffer[i] for i in range(CELLS)}
 
     send_voltage_info(config, "[Voltage]", voltage_data)
 
