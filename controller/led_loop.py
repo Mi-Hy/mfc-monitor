@@ -3,6 +3,7 @@ from lib.influxdb import *
 from lib.tca9554 import TCA9554
 from lib.configuration import *
 
+io = TCA9554()
 
 CELLS = 8
 
