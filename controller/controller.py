@@ -93,7 +93,7 @@ def main_loop():
 
     system_scheduler.start()
     voltage_scheduler.start()
-    load_scheduler.start()
+    # load_scheduler.start()
 
     while 1:
         print(f"System remaining time: {system_scheduler.get_remaining_time()}")
