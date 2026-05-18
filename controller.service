@@ -3,8 +3,8 @@ Description=System controller Service
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python3 /home/pi/mfc-validation/controller/controller.py
-WorkingDirectory=/home/pi/mfc-validation/controller
+ExecStart=/usr/bin/python3 /home/pi/mfc-monitor/controller/controller.py
+WorkingDirectory=/home/pi/mfc-monitor/controller
 Restart=always
 RestartSec=30
 User=pi
