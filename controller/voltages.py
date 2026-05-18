@@ -5,7 +5,7 @@ from lib.configuration import *
 
 io = TCA9554()
 
-CELLS = 8
+CELLS = 4
 
 value_mapper = {0: 3, 1: 2, 2: 1, 3: 0, 4: 7, 5: 6, 6: 5, 7: 4}
 
