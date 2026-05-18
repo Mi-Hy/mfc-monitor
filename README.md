@@ -67,7 +67,7 @@ sudo python3 -m pip install pyserial --break-system-packages
 5. Run services
 	1. Copy service files to systemd:
 	```
-	sudo cp ~/mfc-validation/controller.service /lib/systemd/system/
+	sudo cp ~/mfc-monitor/controller.service /lib/systemd/system/
  	```
  	2. Enable and start services
   	```
