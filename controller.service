@@ -3,7 +3,7 @@ Description=System controller Service
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python3 /home/pi/mfc-monitor/controller/controller.py
+ExecStart=/usr/bin/python3 -u /home/pi/mfc-monitor/controller/controller.py
 WorkingDirectory=/home/pi/mfc-monitor/controller
 Restart=always
 RestartSec=30
