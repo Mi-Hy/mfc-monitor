@@ -78,3 +78,8 @@ sudo python3 -m pip install pyserial --break-system-packages
     ```
    	sudo journalctl -u controller.service -f
     ```
+   	4. After updates
+	```
+	sudo systemctl daemon-reload
+	sudo systemctl restart controller.service
+ 	```
