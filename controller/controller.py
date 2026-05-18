@@ -98,7 +98,7 @@ def main_loop():
     while 1:
         print(f"System remaining time: {system_scheduler.get_remaining_time()}")
         print(f"Voltage remaining time: {voltage_scheduler.get_remaining_time()}")
-        print(f"Load remaining time: {load_scheduler.get_remaining_time()}")
+        # print(f"Load remaining time: {load_scheduler.get_remaining_time()}")
         time.sleep(10)
 
 
