@@ -36,7 +36,7 @@ load_countdown_vars = ["load_countdown_hour", "load_countdown_minute", "load_cou
 # Init schedulers
 system_scheduler = Scheduler("System", system_script_path, start_time, system_interval, system_countdown_vars, False)
 voltage_scheduler = Scheduler("Voltage", voltage_script_path, start_time, voltage_interval, voltage_countdown_vars, False)
-load_scheduler = Scheduler("Load", load_script_path, start_time, load_interval, load_countdown_vars, False)
+# load_scheduler = Scheduler("Load", load_script_path, start_time, load_interval, load_countdown_vars, False)
 
 # def wait_for_network(host="8.8.8.8", port=53, timeout=3, retry_interval=5, max_wait=300):
 #     """
@@ -83,7 +83,7 @@ def main_loop():
     #   Init auto measurement settings
     update_system_timer_settings(config["timer_settings"])
     update_voltage_timer_settings(config["timer_settings"])
-    update_load_timer_settings(config["timer_settings"])
+    # update_load_timer_settings(config["timer_settings"])
 
     #   Check device mode and change power settings
     # check_device_mode(config)
