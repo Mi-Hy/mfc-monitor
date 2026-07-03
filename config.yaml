@@ -1,5 +1,5 @@
 fixed_configurations:
-  device_name: mfc01
+  device_name: mfc02
   firmware_version: 'v0.0.1'
 influxdb:
   url: https://influxdb.dramcoserver.be/
